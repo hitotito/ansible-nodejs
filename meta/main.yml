@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: Hitoshi Okonogi
+  description: role to install nodejs and configure
+  company: hitotito
+  min_ansible_version: 2.0
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+  galaxy_tags:
+    - javascript
+    - nodejs
+
+dependencies:
+  - role: hitotito.custom-facts
+    custom_facts_name: hitotito_nodejs
+    custom_facts_file: nodejs.fact

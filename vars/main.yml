@@ -1,0 +1,7 @@
+---
+nodejs_url: "{{ nodejs_base_url }}/setup_{{ nodejs_version }}.x"
+nodejs_install_script_path: "{{ nodejs_folder_temp }}/nodejs_install_script_{{ nodejs_version}}"
+
+nodejs_current_installed: "{{ hostvars[inventory_hostname].ansible_local.hitotito_nodejs.nodejs.installed }}"
+nodejs_current_version: "{{ hostvars[inventory_hostname].ansible_local.hitotito_nodejs.nodejs.version }}"
+nodejs_current_major_version: "{{ hostvars[inventory_hostname].ansible_local.hitotito_nodejs.nodejs.version_fields.major_version }}"

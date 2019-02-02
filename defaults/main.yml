@@ -1,0 +1,9 @@
+---
+# nodejs version to be install
+# available: 11, 10, 8, 6
+nodejs_version: 11
+
+nodejs_base_url: "http://deb.nodesource.com"
+nodejs_folder_temp: "/tmp"
+
+nodejs_pm2_enabled: false

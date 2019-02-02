@@ -1,0 +1,32 @@
+---
+- name: INSTALL | Reinstall nodejs
+  when: nodejs_current_major_version != (nodejs_version | string)
+  block:
+    - name: INSTALL | Remove existing nodejs
+      apt:
+        name: nodejs
+        state: absent
+
+    - name: INSTALL | Download nodejs install script
+      get_url:
+        url: "{{ nodejs_url }}"
+        dest: "{{ nodejs_install_script_path }}"
+        mode: 0744
+
+    - name: INSTALL | Run install script
+      shell: |
+        bash "{{ nodejs_install_script_path }}"
+      args:
+        executable: /bin/bash
+
+    - name: INSTALL | Install nodejs
+      apt:
+        name: nodejs
+        state: present
+
+- name: INSTALL | Install pm2
+  when: nodejs_pm2_enabled
+  npm:
+    name: pm2
+    state: present
+    global: true
