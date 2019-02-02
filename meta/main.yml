@@ -1,9 +1,10 @@
 ---
 galaxy_info:
+  role_name: nodejs
   author: Hitoshi Okonogi
   description: role to install nodejs and configure
   company: hitotito
-  min_ansible_version: 2.0
+  min_ansible_version: 2.2
   platforms:
     - name: Debian
       versions:
