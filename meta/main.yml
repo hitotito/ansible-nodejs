@@ -4,6 +4,7 @@ galaxy_info:
   author: Hitoshi Okonogi
   description: role to install nodejs and configure
   company: hitotito
+  license: MIT
   min_ansible_version: 2.2
   platforms:
     - name: Debian
