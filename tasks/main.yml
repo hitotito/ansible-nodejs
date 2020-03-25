@@ -14,7 +14,7 @@
         mode: 0744
 
     - name: INSTALL | Run install script
-      command: |
+      shell: |
         bash "{{ nodejs_install_script_path }}"
       args:
         executable: /bin/bash
