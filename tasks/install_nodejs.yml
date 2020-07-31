@@ -1,0 +1,22 @@
+---
+- name: INSTALL_NODEJS | Remove existing nodejs
+  apt:
+    name: nodejs
+    state: absent
+
+- name: INSTALL_NODEJS | Download nodejs install script
+  get_url:
+    url: "{{ nodejs_url }}"
+    dest: "{{ nodejs_install_script_path }}"
+    mode: 0744
+
+- name: INSTALL_NODEJS | Run install script
+  shell: |
+    bash "{{ nodejs_install_script_path }}"
+  args:
+    executable: /bin/bash
+
+- name: INSTALL_NODEJS | Install nodejs
+  apt:
+    name: nodejs
+    state: present
