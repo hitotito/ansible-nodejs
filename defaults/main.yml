@@ -1,11 +1,13 @@
 ---
 # nodejs version to be install
-# available: 12, 11, 10, 8, 6
-nodejs_version: 12
+# available: 14, 13, 12, 11, 10, 8, 6
+nodejs_version: 14
 
 nodejs_base_url: "http://deb.nodesource.com"
 nodejs_folder_temp: "/tmp"
 
+# For available version of yarn, please use `apt-cache madision yarn`
 nodejs_yarn_enabled: false
+nodejs_yarn_version: 1.22.5-1
 nodejs_yarn_gpg_key_url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
 nodejs_yarn_repo_url: "deb https://dl.yarnpkg.com/debian/ stable main"

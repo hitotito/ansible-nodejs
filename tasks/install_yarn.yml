@@ -12,7 +12,7 @@
 
 - name: INSTALL_YARN | install yarn
   apt:
-    name: yarn
+    name: "yarn={{ nodejs_yarn_version }}"
     state: present
     update_cache: true
     install_recommends: false

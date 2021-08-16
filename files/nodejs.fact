@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 import json
 import subprocess
 
@@ -30,6 +30,6 @@ def nodejs_facts():
         }
 
 if __name__ == "__main__":
-    print json.dumps({
+    print(json.dumps({
         "nodejs": nodejs_facts(),
-    }, sort_keys=True)
+    }, sort_keys=True))
